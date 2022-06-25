@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v5.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v5.0": {
+      "YoloSozluk.Api.Application/1.0.0": {
+        "runtime": {
+          "YoloSozluk.Api.Application.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "YoloSozluk.Api.Application/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

@@ -13,7 +13,10 @@ namespace YoloSozluk.Infrastructure.Persistence.EntityConfigurations.Entry
 
             builder.ToTable("entry", YoloSozlukContext.DEFAULT_SCHEMA);
 
-            builder.HasOne(x => x.CreatedBy).WithMany(x => x.Entries).HasForeignKey(x => x.CreatedById);
+            builder.HasOne(x => x.CreatedBy)
+                   .WithMany(x => x.Entries)
+                   .HasForeignKey(x => x.CreatedById)
+                   .OnDelete(DeleteBehavior.Restrict);
         }
     }
 }

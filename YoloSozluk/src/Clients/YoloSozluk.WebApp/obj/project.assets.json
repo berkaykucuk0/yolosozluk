@@ -1145,19 +1145,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Lenovo\\.nuget\\packages\\": {}
+    "C:\\Users\\kucuk\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Lenovo\\Desktop\\Digitus-Berkay\\Dokumanlar\\YoloSozluk\\src\\Clients\\YoloSozluk.WebApp\\YoloSozluk.WebApp.csproj",
+      "projectUniqueName": "C:\\Users\\kucuk\\OneDrive\\Belgeler\\GitHub\\yolosozluk\\YoloSozluk\\src\\Clients\\YoloSozluk.WebApp\\YoloSozluk.WebApp.csproj",
       "projectName": "YoloSozluk.WebApp",
-      "projectPath": "C:\\Users\\Lenovo\\Desktop\\Digitus-Berkay\\Dokumanlar\\YoloSozluk\\src\\Clients\\YoloSozluk.WebApp\\YoloSozluk.WebApp.csproj",
-      "packagesPath": "C:\\Users\\Lenovo\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Lenovo\\Desktop\\Digitus-Berkay\\Dokumanlar\\YoloSozluk\\src\\Clients\\YoloSozluk.WebApp\\obj\\",
+      "projectPath": "C:\\Users\\kucuk\\OneDrive\\Belgeler\\GitHub\\yolosozluk\\YoloSozluk\\src\\Clients\\YoloSozluk.WebApp\\YoloSozluk.WebApp.csproj",
+      "packagesPath": "C:\\Users\\kucuk\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\kucuk\\OneDrive\\Belgeler\\GitHub\\yolosozluk\\YoloSozluk\\src\\Clients\\YoloSozluk.WebApp\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\Lenovo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\kucuk\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -1210,7 +1215,7 @@
         "downloadDependencies": [
           {
             "name": "Microsoft.NETCore.App.Runtime.browser-wasm",
-            "version": "[5.0.16, 5.0.16]"
+            "version": "[5.0.13, 5.0.13]"
           }
         ],
         "frameworkReferences": {
@@ -1218,7 +1223,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
       }
     },
     "runtimes": {

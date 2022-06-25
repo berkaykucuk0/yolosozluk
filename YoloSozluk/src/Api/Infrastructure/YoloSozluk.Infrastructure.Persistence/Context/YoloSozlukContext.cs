@@ -14,11 +14,17 @@ namespace YoloSozluk.Infrastructure.Persistence.Context
     public class YoloSozlukContext:DbContext
     {
         public const string DEFAULT_SCHEMA = "dbo";
-        public YoloSozlukContext(DbContextOptions options): base(options)
+
+        public YoloSozlukContext()
         {
 
         }
 
+        public YoloSozlukContext(DbContextOptions options): base(options)
+        {
+
+        }
+      
         public DbSet<EmailConfirmation> EmailConfirmations { get; set; }
         public DbSet<Entry> Entries { get; set; }
         public DbSet<EntryComment> EntryCommentS { get; set; }
@@ -28,6 +34,16 @@ namespace YoloSozluk.Infrastructure.Persistence.Context
         public DbSet<EntryVote> EntryVotes { get; set; }
         public DbSet<User> Users { get; set; }
 
+
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+            if (!optionsBuilder.IsConfigured)
+            {
+                var cnnStr = "Server=DESKTOP-JAS67L4\\SQLEXPRESS;Database=YoloSozlukDB;Trusted_Connection=True;";
+                optionsBuilder.UseSqlServer(cnnStr);
+            }
+            base.OnConfiguring(optionsBuilder);     
+        }
 
         public void OnBeforeSave()
         {

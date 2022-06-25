@@ -15,7 +15,8 @@ namespace YoloSozluk.Infrastructure.Persistence.EntityConfigurations.EntryCommen
 
             builder.HasOne(x => x.CreatedBy)
                   .WithMany(x => x.EntryCommentFavourites)
-                  .HasForeignKey(x => x.CreatedById);
+                  .HasForeignKey(x => x.CreatedById)
+                  .OnDelete(DeleteBehavior.Restrict);
 
             builder.HasOne(x => x.EntryComment)
                    .WithMany(x => x.EntryCommentFavourites)

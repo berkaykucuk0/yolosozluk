@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Lenovo\\Desktop\\Digitus-Berkay\\Dokumanlar\\YoloSozluk\\src\\Projections\\YoloSozluk.Projections.FavouriteService\\YoloSozluk.Projections.FavouriteService.csproj": {}
+    "C:\\Users\\kucuk\\OneDrive\\Belgeler\\GitHub\\yolosozluk\\YoloSozluk\\src\\Projections\\YoloSozluk.Projections.FavouriteService\\YoloSozluk.Projections.FavouriteService.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Lenovo\\Desktop\\Digitus-Berkay\\Dokumanlar\\YoloSozluk\\src\\Projections\\YoloSozluk.Projections.FavouriteService\\YoloSozluk.Projections.FavouriteService.csproj": {
+    "C:\\Users\\kucuk\\OneDrive\\Belgeler\\GitHub\\yolosozluk\\YoloSozluk\\src\\Projections\\YoloSozluk.Projections.FavouriteService\\YoloSozluk.Projections.FavouriteService.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Lenovo\\Desktop\\Digitus-Berkay\\Dokumanlar\\YoloSozluk\\src\\Projections\\YoloSozluk.Projections.FavouriteService\\YoloSozluk.Projections.FavouriteService.csproj",
+        "projectUniqueName": "C:\\Users\\kucuk\\OneDrive\\Belgeler\\GitHub\\yolosozluk\\YoloSozluk\\src\\Projections\\YoloSozluk.Projections.FavouriteService\\YoloSozluk.Projections.FavouriteService.csproj",
         "projectName": "YoloSozluk.Projections.FavouriteService",
-        "projectPath": "C:\\Users\\Lenovo\\Desktop\\Digitus-Berkay\\Dokumanlar\\YoloSozluk\\src\\Projections\\YoloSozluk.Projections.FavouriteService\\YoloSozluk.Projections.FavouriteService.csproj",
-        "packagesPath": "C:\\Users\\Lenovo\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Lenovo\\Desktop\\Digitus-Berkay\\Dokumanlar\\YoloSozluk\\src\\Projections\\YoloSozluk.Projections.FavouriteService\\obj\\",
+        "projectPath": "C:\\Users\\kucuk\\OneDrive\\Belgeler\\GitHub\\yolosozluk\\YoloSozluk\\src\\Projections\\YoloSozluk.Projections.FavouriteService\\YoloSozluk.Projections.FavouriteService.csproj",
+        "packagesPath": "C:\\Users\\kucuk\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\kucuk\\OneDrive\\Belgeler\\GitHub\\yolosozluk\\YoloSozluk\\src\\Projections\\YoloSozluk.Projections.FavouriteService\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\Lenovo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\kucuk\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -60,7 +64,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
         }
       }
     }

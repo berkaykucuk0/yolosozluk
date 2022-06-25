@@ -1,0 +1,12 @@
+C:\Users\kucuk\OneDrive\Belgeler\GitHub\yolosozluk\YoloSozluk\src\Api\Core\YoloSozluk.Api.Application\bin\Debug\net5.0\YoloSozluk.Api.Application.deps.json
+C:\Users\kucuk\OneDrive\Belgeler\GitHub\yolosozluk\YoloSozluk\src\Api\Core\YoloSozluk.Api.Application\bin\Debug\net5.0\YoloSozluk.Api.Application.dll
+C:\Users\kucuk\OneDrive\Belgeler\GitHub\yolosozluk\YoloSozluk\src\Api\Core\YoloSozluk.Api.Application\bin\Debug\net5.0\ref\YoloSozluk.Api.Application.dll
+C:\Users\kucuk\OneDrive\Belgeler\GitHub\yolosozluk\YoloSozluk\src\Api\Core\YoloSozluk.Api.Application\bin\Debug\net5.0\YoloSozluk.Api.Application.pdb
+C:\Users\kucuk\OneDrive\Belgeler\GitHub\yolosozluk\YoloSozluk\src\Api\Core\YoloSozluk.Api.Application\obj\Debug\net5.0\YoloSozluk.Api.Application.csproj.AssemblyReference.cache
+C:\Users\kucuk\OneDrive\Belgeler\GitHub\yolosozluk\YoloSozluk\src\Api\Core\YoloSozluk.Api.Application\obj\Debug\net5.0\YoloSozluk.Api.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\kucuk\OneDrive\Belgeler\GitHub\yolosozluk\YoloSozluk\src\Api\Core\YoloSozluk.Api.Application\obj\Debug\net5.0\YoloSozluk.Api.Application.AssemblyInfoInputs.cache
+C:\Users\kucuk\OneDrive\Belgeler\GitHub\yolosozluk\YoloSozluk\src\Api\Core\YoloSozluk.Api.Application\obj\Debug\net5.0\YoloSozluk.Api.Application.AssemblyInfo.cs
+C:\Users\kucuk\OneDrive\Belgeler\GitHub\yolosozluk\YoloSozluk\src\Api\Core\YoloSozluk.Api.Application\obj\Debug\net5.0\YoloSozluk.Api.Application.csproj.CoreCompileInputs.cache
+C:\Users\kucuk\OneDrive\Belgeler\GitHub\yolosozluk\YoloSozluk\src\Api\Core\YoloSozluk.Api.Application\obj\Debug\net5.0\YoloSozluk.Api.Application.dll
+C:\Users\kucuk\OneDrive\Belgeler\GitHub\yolosozluk\YoloSozluk\src\Api\Core\YoloSozluk.Api.Application\obj\Debug\net5.0\ref\YoloSozluk.Api.Application.dll
+C:\Users\kucuk\OneDrive\Belgeler\GitHub\yolosozluk\YoloSozluk\src\Api\Core\YoloSozluk.Api.Application\obj\Debug\net5.0\YoloSozluk.Api.Application.pdb
