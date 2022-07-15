@@ -20,6 +20,9 @@ namespace YoloSozluk.Infrastructure.Persistence.Extensions
                 conf.UseSqlServer(cnnStr);
             });
 
+            //Data seeding yapmak için burayı aç
+             //var seedData = new SeedData();
+             //seedData.SeedAsync(conf).GetAwaiter().GetResult();
 
             return services;
         }
