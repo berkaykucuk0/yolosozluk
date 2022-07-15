@@ -6,12 +6,12 @@
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v5.0": {
-      "YoloSozluk.Api.Application/1.0.0": {
+      "YoloSozluk.Common/1.0.0": {
         "dependencies": {
-          "YoloSozluk.Api.Domain": "1.0.0"
+          "Microsoft.Extensions.Hosting": "5.0.0"
         },
         "runtime": {
-          "YoloSozluk.Api.Application.dll": {}
+          "YoloSozluk.Common.dll": {}
         }
       },
       "Microsoft.Extensions.Configuration/5.0.0": {
@@ -379,27 +379,11 @@
           "System.Security.Principal.Windows": "5.0.0"
         }
       },
-      "System.Security.Principal.Windows/5.0.0": {},
-      "YoloSozluk.Api.Domain/1.0.0": {
-        "dependencies": {
-          "YoloSozluk.Common": "1.0.0"
-        },
-        "runtime": {
-          "YoloSozluk.Api.Domain.dll": {}
-        }
-      },
-      "YoloSozluk.Common/1.0.0": {
-        "dependencies": {
-          "Microsoft.Extensions.Hosting": "5.0.0"
-        },
-        "runtime": {
-          "YoloSozluk.Common.dll": {}
-        }
-      }
+      "System.Security.Principal.Windows/5.0.0": {}
     }
   },
   "libraries": {
-    "YoloSozluk.Api.Application/1.0.0": {
+    "YoloSozluk.Common/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
@@ -613,16 +597,6 @@
       "sha512": "sha512-t0MGLukB5WAVU9bO3MGzvlGnyJPgUlcwerXn1kzBRjwLKixT96XV0Uza41W49gVd8zEMFu9vQEFlv0IOrytICA==",
       "path": "system.security.principal.windows/5.0.0",
       "hashPath": "system.security.principal.windows.5.0.0.nupkg.sha512"
-    },
-    "YoloSozluk.Api.Domain/1.0.0": {
-      "type": "project",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "YoloSozluk.Common/1.0.0": {
-      "type": "project",
-      "serviceable": false,
-      "sha512": ""
     }
   }
 }
