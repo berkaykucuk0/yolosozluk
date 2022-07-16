@@ -1825,6 +1825,19 @@
           "lib/netstandard1.3/System.Xml.XmlSerializer.dll": {}
         }
       },
+      "YoloSozluk.Api.Application/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "YoloSozluk.Api.Domain": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/YoloSozluk.Api.Application.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/YoloSozluk.Api.Application.dll": {}
+        }
+      },
       "YoloSozluk.Api.Domain/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v5.0",
@@ -6536,6 +6549,11 @@
         "system.xml.xmlserializer.nuspec"
       ]
     },
+    "YoloSozluk.Api.Application/1.0.0": {
+      "type": "project",
+      "path": "../../Core/YoloSozluk.Api.Application/YoloSozluk.Api.Application.csproj",
+      "msbuildProject": "../../Core/YoloSozluk.Api.Application/YoloSozluk.Api.Application.csproj"
+    },
     "YoloSozluk.Api.Domain/1.0.0": {
       "type": "project",
       "path": "../../Core/YoloSozluk.Api.Domain/YoloSozluk.Api.Domain.csproj",
@@ -6554,6 +6572,7 @@
       "Microsoft.EntityFrameworkCore.Relational >= 5.0.17",
       "Microsoft.EntityFrameworkCore.SqlServer >= 5.0.17",
       "Microsoft.EntityFrameworkCore.Tools >= 5.0.17",
+      "YoloSozluk.Api.Application >= 1.0.0",
       "YoloSozluk.Api.Domain >= 1.0.0"
     ]
   },
@@ -6589,6 +6608,9 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
+            "C:\\Users\\kucuk\\OneDrive\\Belgeler\\GitHub\\yolosozluk\\YoloSozluk\\src\\Api\\Core\\YoloSozluk.Api.Application\\YoloSozluk.Api.Application.csproj": {
+              "projectPath": "C:\\Users\\kucuk\\OneDrive\\Belgeler\\GitHub\\yolosozluk\\YoloSozluk\\src\\Api\\Core\\YoloSozluk.Api.Application\\YoloSozluk.Api.Application.csproj"
+            },
             "C:\\Users\\kucuk\\OneDrive\\Belgeler\\GitHub\\yolosozluk\\YoloSozluk\\src\\Api\\Core\\YoloSozluk.Api.Domain\\YoloSozluk.Api.Domain.csproj": {
               "projectPath": "C:\\Users\\kucuk\\OneDrive\\Belgeler\\GitHub\\yolosozluk\\YoloSozluk\\src\\Api\\Core\\YoloSozluk.Api.Domain\\YoloSozluk.Api.Domain.csproj"
             }

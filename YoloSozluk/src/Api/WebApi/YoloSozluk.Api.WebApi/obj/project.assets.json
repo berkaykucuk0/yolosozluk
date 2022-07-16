@@ -1861,6 +1861,19 @@
           "lib/netstandard1.3/System.Xml.XmlSerializer.dll": {}
         }
       },
+      "YoloSozluk.Api.Application/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "YoloSozluk.Api.Domain": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/YoloSozluk.Api.Application.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/YoloSozluk.Api.Application.dll": {}
+        }
+      },
       "YoloSozluk.Api.Domain/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v5.0",
@@ -1895,6 +1908,7 @@
           "Microsoft.EntityFrameworkCore": "5.0.17",
           "Microsoft.EntityFrameworkCore.Relational": "5.0.17",
           "Microsoft.EntityFrameworkCore.SqlServer": "5.0.17",
+          "YoloSozluk.Api.Application": "1.0.0",
           "YoloSozluk.Api.Domain": "1.0.0"
         },
         "compile": {
@@ -6639,6 +6653,11 @@
         "system.xml.xmlserializer.4.3.0.nupkg.sha512",
         "system.xml.xmlserializer.nuspec"
       ]
+    },
+    "YoloSozluk.Api.Application/1.0.0": {
+      "type": "project",
+      "path": "../../Core/YoloSozluk.Api.Application/YoloSozluk.Api.Application.csproj",
+      "msbuildProject": "../../Core/YoloSozluk.Api.Application/YoloSozluk.Api.Application.csproj"
     },
     "YoloSozluk.Api.Domain/1.0.0": {
       "type": "project",

@@ -24,3 +24,5 @@ C:\Users\kucuk\OneDrive\Belgeler\GitHub\yolosozluk\YoloSozluk\src\Api\Infrastruc
 C:\Users\kucuk\OneDrive\Belgeler\GitHub\yolosozluk\YoloSozluk\src\Api\Infrastructure\YoloSozluk.Infrastructure.Persistence\obj\Debug\net5.0\ref\YoloSozluk.Infrastructure.Persistence.dll
 C:\Users\kucuk\OneDrive\Belgeler\GitHub\yolosozluk\YoloSozluk\src\Api\Infrastructure\YoloSozluk.Infrastructure.Persistence\obj\Debug\net5.0\YoloSozluk.Infrastructure.Persistence.pdb
 C:\Users\kucuk\OneDrive\Belgeler\GitHub\yolosozluk\YoloSozluk\src\Api\Infrastructure\YoloSozluk.Infrastructure.Persistence\obj\Debug\net5.0\YoloSozluk.Infrastructure.Persistence.genruntimeconfig.cache
+C:\Users\kucuk\OneDrive\Belgeler\GitHub\yolosozluk\YoloSozluk\src\Api\Infrastructure\YoloSozluk.Infrastructure.Persistence\bin\Debug\net5.0\YoloSozluk.Api.Application.dll
+C:\Users\kucuk\OneDrive\Belgeler\GitHub\yolosozluk\YoloSozluk\src\Api\Infrastructure\YoloSozluk.Infrastructure.Persistence\bin\Debug\net5.0\YoloSozluk.Api.Application.pdb

@@ -67,3 +67,5 @@ C:\Users\kucuk\OneDrive\Belgeler\GitHub\yolosozluk\YoloSozluk\src\Api\WebApi\Yol
 C:\Users\kucuk\OneDrive\Belgeler\GitHub\yolosozluk\YoloSozluk\src\Api\WebApi\YoloSozluk.Api.WebApi\obj\Debug\net5.0\ref\YoloSozluk.Api.WebApi.dll
 C:\Users\kucuk\OneDrive\Belgeler\GitHub\yolosozluk\YoloSozluk\src\Api\WebApi\YoloSozluk.Api.WebApi\obj\Debug\net5.0\YoloSozluk.Api.WebApi.pdb
 C:\Users\kucuk\OneDrive\Belgeler\GitHub\yolosozluk\YoloSozluk\src\Api\WebApi\YoloSozluk.Api.WebApi\obj\Debug\net5.0\YoloSozluk.Api.WebApi.genruntimeconfig.cache
+C:\Users\kucuk\OneDrive\Belgeler\GitHub\yolosozluk\YoloSozluk\src\Api\WebApi\YoloSozluk.Api.WebApi\bin\Debug\net5.0\YoloSozluk.Api.Application.dll
+C:\Users\kucuk\OneDrive\Belgeler\GitHub\yolosozluk\YoloSozluk\src\Api\WebApi\YoloSozluk.Api.WebApi\bin\Debug\net5.0\YoloSozluk.Api.Application.pdb

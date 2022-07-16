@@ -17,14 +17,14 @@ namespace YoloSozluk.Api.Application.IRepositories
         int Add(IEnumerable<TEntity> entity);
 
 
-        Task<int> UpdateAsync(IEnumerable<TEntity> entity);
+        Task<int> UpdateAsync(TEntity entity);
         int Update(TEntity entity);
 
         Task<int> DeleteAsync(Guid id );
         int Delete(Guid id);
-        Task<int>DeleteAsync(IEnumerable<TEntity> entity);
+        Task<int>DeleteAsync(TEntity entity);
         int Delete(TEntity entity);
-        Task<int> DeleteRangeAsync(Expression<Func<TEntity,bool>> predicate);
+        Task<bool> DeleteRangeAsync(Expression<Func<TEntity,bool>> predicate);
         bool DeleteRange(Expression<Func<TEntity, bool>> predicate);
 
 
@@ -43,7 +43,6 @@ namespace YoloSozluk.Api.Application.IRepositories
         IQueryable<TEntity> Get(Expression<Func<TEntity, bool>> predicate, bool noTracking = true, params Expression<Func<TEntity, object>>[] includes);
 
         Task BulkDeleteById(IEnumerable<Guid> ids);
-        Task BulkDelete(Expression<Func<TEntity, bool>> predicate);
         Task BulkDelete(IEnumerable<TEntity> entities);
         Task BulkUpdate(IEnumerable<TEntity> entities);
         Task BulkAdd(IEnumerable<TEntity> entities);
