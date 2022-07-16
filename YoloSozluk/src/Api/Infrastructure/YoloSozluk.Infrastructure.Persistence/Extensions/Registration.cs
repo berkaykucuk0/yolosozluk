@@ -6,7 +6,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using YoloSozluk.Api.Application.IRepositories;
 using YoloSozluk.Infrastructure.Persistence.Context;
+using YoloSozluk.Infrastructure.Persistence.Repositories;
 
 namespace YoloSozluk.Infrastructure.Persistence.Extensions
 {
@@ -21,8 +23,15 @@ namespace YoloSozluk.Infrastructure.Persistence.Extensions
             });
 
             //Data seeding yapmak için burayı aç
-             //var seedData = new SeedData();
-             //seedData.SeedAsync(conf).GetAwaiter().GetResult();
+            //var seedData = new SeedData();
+            //seedData.SeedAsync(conf).GetAwaiter().GetResult();
+
+
+            services.AddScoped<IUserRepository, UserRepository>();
+            services.AddScoped<IEntryRepository, EntryRepository>();
+            services.AddScoped<IEntryCommentRepository, EntryCommentRepository>();
+            services.AddScoped<IEmailConfirmationRepository, EmailConfirmationRepository>();
+
 
             return services;
         }
