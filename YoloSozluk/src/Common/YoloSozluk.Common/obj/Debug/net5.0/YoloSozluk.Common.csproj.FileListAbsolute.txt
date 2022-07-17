@@ -44,3 +44,10 @@ C:\Users\kucuk\OneDrive\Belgeler\GitHub\yolosozluk\YoloSozluk\src\Common\YoloSoz
 C:\Users\kucuk\OneDrive\Belgeler\GitHub\yolosozluk\YoloSozluk\src\Common\YoloSozluk.Common\obj\Debug\net5.0\YoloSozluk.Common.pdb
 C:\Users\kucuk\OneDrive\Belgeler\GitHub\yolosozluk\YoloSozluk\src\Common\YoloSozluk.Common\obj\Debug\net5.0\YoloSozluk.Common.genruntimeconfig.cache
 C:\Users\kucuk\OneDrive\Belgeler\GitHub\yolosozluk\YoloSozluk\src\Common\YoloSozluk.Common\obj\Debug\net5.0\YoloSozluk.Common.csproj.AssemblyReference.cache
+C:\Users\kucuk\OneDrive\Belgeler\GitHub\yolosozluk\YoloSozluk\src\Common\YoloSozluk.Common\bin\Debug\net5.0\MediatR.dll
+C:\Users\kucuk\OneDrive\Belgeler\GitHub\yolosozluk\YoloSozluk\src\Common\YoloSozluk.Common\bin\Debug\net5.0\MediatR.Contracts.dll
+C:\Users\kucuk\OneDrive\Belgeler\GitHub\yolosozluk\YoloSozluk\src\Common\YoloSozluk.Common\bin\Debug\net5.0\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\kucuk\OneDrive\Belgeler\GitHub\yolosozluk\YoloSozluk\src\Common\YoloSozluk.Common\bin\Debug\net5.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\kucuk\OneDrive\Belgeler\GitHub\yolosozluk\YoloSozluk\src\Common\YoloSozluk.Common\bin\Debug\net5.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\kucuk\OneDrive\Belgeler\GitHub\yolosozluk\YoloSozluk\src\Common\YoloSozluk.Common\bin\Debug\net5.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\kucuk\OneDrive\Belgeler\GitHub\yolosozluk\YoloSozluk\src\Common\YoloSozluk.Common\bin\Debug\net5.0\System.IdentityModel.Tokens.Jwt.dll

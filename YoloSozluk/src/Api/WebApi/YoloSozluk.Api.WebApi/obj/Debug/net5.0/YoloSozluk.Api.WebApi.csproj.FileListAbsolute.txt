@@ -69,3 +69,16 @@ C:\Users\kucuk\OneDrive\Belgeler\GitHub\yolosozluk\YoloSozluk\src\Api\WebApi\Yol
 C:\Users\kucuk\OneDrive\Belgeler\GitHub\yolosozluk\YoloSozluk\src\Api\WebApi\YoloSozluk.Api.WebApi\obj\Debug\net5.0\YoloSozluk.Api.WebApi.genruntimeconfig.cache
 C:\Users\kucuk\OneDrive\Belgeler\GitHub\yolosozluk\YoloSozluk\src\Api\WebApi\YoloSozluk.Api.WebApi\bin\Debug\net5.0\YoloSozluk.Api.Application.dll
 C:\Users\kucuk\OneDrive\Belgeler\GitHub\yolosozluk\YoloSozluk\src\Api\WebApi\YoloSozluk.Api.WebApi\bin\Debug\net5.0\YoloSozluk.Api.Application.pdb
+C:\Users\kucuk\OneDrive\Belgeler\GitHub\yolosozluk\YoloSozluk\src\Api\WebApi\YoloSozluk.Api.WebApi\bin\Debug\net5.0\AutoMapper.dll
+C:\Users\kucuk\OneDrive\Belgeler\GitHub\yolosozluk\YoloSozluk\src\Api\WebApi\YoloSozluk.Api.WebApi\bin\Debug\net5.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+C:\Users\kucuk\OneDrive\Belgeler\GitHub\yolosozluk\YoloSozluk\src\Api\WebApi\YoloSozluk.Api.WebApi\bin\Debug\net5.0\FluentValidation.dll
+C:\Users\kucuk\OneDrive\Belgeler\GitHub\yolosozluk\YoloSozluk\src\Api\WebApi\YoloSozluk.Api.WebApi\bin\Debug\net5.0\FluentValidation.AspNetCore.dll
+C:\Users\kucuk\OneDrive\Belgeler\GitHub\yolosozluk\YoloSozluk\src\Api\WebApi\YoloSozluk.Api.WebApi\bin\Debug\net5.0\FluentValidation.DependencyInjectionExtensions.dll
+C:\Users\kucuk\OneDrive\Belgeler\GitHub\yolosozluk\YoloSozluk\src\Api\WebApi\YoloSozluk.Api.WebApi\bin\Debug\net5.0\MediatR.dll
+C:\Users\kucuk\OneDrive\Belgeler\GitHub\yolosozluk\YoloSozluk\src\Api\WebApi\YoloSozluk.Api.WebApi\bin\Debug\net5.0\MediatR.Contracts.dll
+C:\Users\kucuk\OneDrive\Belgeler\GitHub\yolosozluk\YoloSozluk\src\Api\WebApi\YoloSozluk.Api.WebApi\bin\Debug\net5.0\MediatR.Extensions.Microsoft.DependencyInjection.dll
+C:\Users\kucuk\OneDrive\Belgeler\GitHub\yolosozluk\YoloSozluk\src\Api\WebApi\YoloSozluk.Api.WebApi\bin\Debug\net5.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\kucuk\OneDrive\Belgeler\GitHub\yolosozluk\YoloSozluk\src\Api\WebApi\YoloSozluk.Api.WebApi\bin\Debug\net5.0\Microsoft.Extensions.Options.dll
+C:\Users\kucuk\OneDrive\Belgeler\GitHub\yolosozluk\YoloSozluk\src\Api\WebApi\YoloSozluk.Api.WebApi\bin\Debug\net5.0\Microsoft.Extensions.Primitives.dll
+C:\Users\kucuk\OneDrive\Belgeler\GitHub\yolosozluk\YoloSozluk\src\Api\WebApi\YoloSozluk.Api.WebApi\bin\Debug\net5.0\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\kucuk\OneDrive\Belgeler\GitHub\yolosozluk\YoloSozluk\src\Api\WebApi\YoloSozluk.Api.WebApi\bin\Debug\net5.0\System.Runtime.CompilerServices.Unsafe.dll

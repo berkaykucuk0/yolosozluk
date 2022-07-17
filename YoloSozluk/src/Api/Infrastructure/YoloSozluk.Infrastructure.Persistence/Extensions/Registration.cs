@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using YoloSozluk.Api.Application.IRepositories;
+using YoloSozluk.Common.Infrastructure;
 using YoloSozluk.Infrastructure.Persistence.Context;
 using YoloSozluk.Infrastructure.Persistence.Repositories;
 
@@ -16,7 +17,7 @@ namespace YoloSozluk.Infrastructure.Persistence.Extensions
     {
         public static IServiceCollection AddInfrastructureRegistration(this IServiceCollection services, IConfiguration conf)
         {
-            var cnnStr = conf.GetConnectionString("YoloConnection");
+            var cnnStr = conf["YoloConnection"];
             services.AddDbContext<YoloSozlukContext>(conf =>
             {
                 conf.UseSqlServer(cnnStr);
@@ -31,7 +32,7 @@ namespace YoloSozluk.Infrastructure.Persistence.Extensions
             services.AddScoped<IEntryRepository, EntryRepository>();
             services.AddScoped<IEntryCommentRepository, EntryCommentRepository>();
             services.AddScoped<IEmailConfirmationRepository, EmailConfirmationRepository>();
-
+            services.AddScoped<TokenGenerator>();
 
             return services;
         }

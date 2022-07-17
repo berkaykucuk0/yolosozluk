@@ -13,13 +13,13 @@ namespace YoloSozluk.Infrastructure.Persistence.Repositories
 {
     public class GenericRepository<TEntity> : IGenericRepository<TEntity> where TEntity : BaseModel
     {
-        private readonly YoloSozlukContext dbContext;
+        private readonly DbContext dbContext;
 
 
         //Her seferinde dbContext.set<> yazmamak için 
         protected DbSet<TEntity> entity => dbContext.Set<TEntity>();
 
-        public GenericRepository(YoloSozlukContext dbContext)
+        public GenericRepository(DbContext dbContext)
         {
             this.dbContext = dbContext;
         }
@@ -107,13 +107,13 @@ namespace YoloSozluk.Infrastructure.Persistence.Repositories
 
         public virtual bool DeleteRange(Expression<Func<TEntity, bool>> predicate)
         {
-            dbContext.RemoveRange(predicate);
+            dbContext.RemoveRange(entity.Where(predicate));
             return dbContext.SaveChanges() > 0;
         }
 
         public virtual async Task<bool> DeleteRangeAsync(Expression<Func<TEntity, bool>> predicate)
         {
-            dbContext.RemoveRange(predicate);
+            dbContext.RemoveRange(entity.Where(predicate));
             return await dbContext.SaveChangesAsync() > 0;
         }
 
