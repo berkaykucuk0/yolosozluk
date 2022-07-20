@@ -26,7 +26,7 @@ namespace YoloSozluk.Api.Application.Handlers.CommandHandlers
         public UserLoginCommandHandler(IUserRepository userRepo, IMapper mapper, IConfiguration conf, TokenGenerator tokengenerator)
         {
             _userRepo = userRepo;
-            _mapper = mapper;
+            _mapper = mapper;   
             _conf = conf;
             _tokengenerator = tokengenerator;
         }

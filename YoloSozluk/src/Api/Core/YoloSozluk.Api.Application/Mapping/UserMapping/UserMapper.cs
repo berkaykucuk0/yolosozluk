@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using YoloSozluk.Api.Domain.Entities;
+using YoloSozluk.Common.Models.Commands;
 using YoloSozluk.Common.Models.ViewModels;
 
 namespace YoloSozluk.Api.Application.Mapping.UserMapping
@@ -14,6 +15,7 @@ namespace YoloSozluk.Api.Application.Mapping.UserMapping
         public UserMapper()
         {
             CreateMap<User, UserLoginViewModel>().ReverseMap();
+            CreateMap<User, UserCreateCommand>().ReverseMap();
         }
     }
 }
