@@ -203,7 +203,10 @@ namespace YoloSozluk.Infrastructure.Persistence.Repositories
             IQueryable<TEntity> query = entity;
 
             if (predicate != null)
+            {
                 query.Where(predicate);
+            }
+                
 
             foreach (var include in includes)
             {
@@ -233,6 +236,7 @@ namespace YoloSozluk.Infrastructure.Persistence.Repositories
             if (predicate != null)
                 query.Where(predicate);
 
+            
             foreach (var include in includes)
             {
                 query = query.Include(include);

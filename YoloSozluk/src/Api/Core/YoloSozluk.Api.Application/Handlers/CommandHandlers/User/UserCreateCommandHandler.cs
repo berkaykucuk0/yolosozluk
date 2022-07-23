@@ -7,7 +7,10 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using YoloSozluk.Api.Application.IRepositories;
+using YoloSozluk.Common;
+using YoloSozluk.Common.Events;
 using YoloSozluk.Common.Exceptions.User;
+using YoloSozluk.Common.Infrastructure;
 using YoloSozluk.Common.Models.Commands;
 
 namespace YoloSozluk.Api.Application.Handlers.CommandHandlers.User
@@ -25,9 +28,10 @@ namespace YoloSozluk.Api.Application.Handlers.CommandHandlers.User
 
         public async Task<bool> Handle(UserCreateCommand request, CancellationToken cancellationToken)
         {
-            var existUser = _userRepo.FirstOrDefaultAsync(x => x.Email == request.Email);
+            var existUser = await  _userRepo.FirstOrDefaultAsync(x => x.Email == request.Email);
 
-            if (existUser != null)
+            
+            if (existUser !=null)
                 throw new UserException("User already exist with this email!");
 
             var user = _mapper.Map<Domain.Entities.User>(request);
@@ -35,7 +39,20 @@ namespace YoloSozluk.Api.Application.Handlers.CommandHandlers.User
 
             return true;
 
-            //EMAIL CONFIRMATION WILL ADD
+            if (response > 0)
+            {
+                var @event = new UserEmailChangedEvent
+                {
+                    NewEmail = user.Email,
+                    OldEmail = null
+                };
+
+                QueueFactory.SendMessageToExchange(exchangeName: Constants.UserEmailChangedExchangeName,
+                                                   exchangeType: Constants.ExchangeType,
+                                                   queueName: Constants.UserEmailChangedQueueName,
+                                                   obj: @event);
+            }
+
         }
     }
 }

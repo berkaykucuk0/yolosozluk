@@ -51,3 +51,4 @@ C:\Users\kucuk\OneDrive\Belgeler\GitHub\yolosozluk\YoloSozluk\src\Common\YoloSoz
 C:\Users\kucuk\OneDrive\Belgeler\GitHub\yolosozluk\YoloSozluk\src\Common\YoloSozluk.Common\bin\Debug\net5.0\Microsoft.IdentityModel.Logging.dll
 C:\Users\kucuk\OneDrive\Belgeler\GitHub\yolosozluk\YoloSozluk\src\Common\YoloSozluk.Common\bin\Debug\net5.0\Microsoft.IdentityModel.Tokens.dll
 C:\Users\kucuk\OneDrive\Belgeler\GitHub\yolosozluk\YoloSozluk\src\Common\YoloSozluk.Common\bin\Debug\net5.0\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\kucuk\OneDrive\Belgeler\GitHub\yolosozluk\YoloSozluk\src\Common\YoloSozluk.Common\bin\Debug\net5.0\RabbitMQ.Client.dll

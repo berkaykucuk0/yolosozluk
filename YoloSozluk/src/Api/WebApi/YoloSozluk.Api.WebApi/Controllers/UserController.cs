@@ -27,6 +27,22 @@ namespace YoloSozluk.Api.WebApi.Controllers
             return Ok(res);
         }
 
-      
+        [HttpPost]
+        [Route("Create")]
+        public async Task<IActionResult> Create([FromBody] UserCreateCommand command)
+        {
+            var res = await _mediator.Send(command);
+            return Ok(res);
+        }
+
+
+        [HttpPut]
+        [Route("Update")]
+        public async Task<IActionResult> Update([FromBody] UserUpdateCommand command)
+        {
+            var res = await _mediator.Send(command);
+            return Ok(res);
+        }
+
     }
 }

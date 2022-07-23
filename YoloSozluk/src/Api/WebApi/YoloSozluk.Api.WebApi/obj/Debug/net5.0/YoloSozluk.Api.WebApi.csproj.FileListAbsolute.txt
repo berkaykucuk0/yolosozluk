@@ -82,3 +82,4 @@ C:\Users\kucuk\OneDrive\Belgeler\GitHub\yolosozluk\YoloSozluk\src\Api\WebApi\Yol
 C:\Users\kucuk\OneDrive\Belgeler\GitHub\yolosozluk\YoloSozluk\src\Api\WebApi\YoloSozluk.Api.WebApi\bin\Debug\net5.0\Microsoft.Extensions.Primitives.dll
 C:\Users\kucuk\OneDrive\Belgeler\GitHub\yolosozluk\YoloSozluk\src\Api\WebApi\YoloSozluk.Api.WebApi\bin\Debug\net5.0\Microsoft.IdentityModel.Abstractions.dll
 C:\Users\kucuk\OneDrive\Belgeler\GitHub\yolosozluk\YoloSozluk\src\Api\WebApi\YoloSozluk.Api.WebApi\bin\Debug\net5.0\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\kucuk\OneDrive\Belgeler\GitHub\yolosozluk\YoloSozluk\src\Api\WebApi\YoloSozluk.Api.WebApi\bin\Debug\net5.0\RabbitMQ.Client.dll

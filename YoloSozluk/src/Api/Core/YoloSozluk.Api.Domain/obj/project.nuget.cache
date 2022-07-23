@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "nEmb6gL9hM01KQbpu6HiB5wWSNnvDYDHkPcWK8zAQTNR9TqYfCLq9/Pb8BPaoWFoEHpnw87NqeawcZkMffQ0Aw==",
+  "dgSpecHash": "YFxNeI+bm19bOvU4aK50CO6i3+vgFPOde3R2/ki+D/pTI5mR00nnk8xHQuh0UTTj3mR84kqbqQQcW8fvrk9pZw==",
   "success": true,
   "projectFilePath": "C:\\Users\\kucuk\\OneDrive\\Belgeler\\GitHub\\yolosozluk\\YoloSozluk\\src\\Api\\Core\\YoloSozluk.Api.Domain\\YoloSozluk.Api.Domain.csproj",
   "expectedPackageFiles": [
@@ -38,11 +38,14 @@
     "C:\\Users\\kucuk\\.nuget\\packages\\microsoft.identitymodel.tokens\\6.21.0\\microsoft.identitymodel.tokens.6.21.0.nupkg.sha512",
     "C:\\Users\\kucuk\\.nuget\\packages\\microsoft.netcore.platforms\\5.0.0\\microsoft.netcore.platforms.5.0.0.nupkg.sha512",
     "C:\\Users\\kucuk\\.nuget\\packages\\microsoft.win32.registry\\5.0.0\\microsoft.win32.registry.5.0.0.nupkg.sha512",
+    "C:\\Users\\kucuk\\.nuget\\packages\\rabbitmq.client\\6.4.0\\rabbitmq.client.6.4.0.nupkg.sha512",
     "C:\\Users\\kucuk\\.nuget\\packages\\system.diagnostics.eventlog\\5.0.0\\system.diagnostics.eventlog.5.0.0.nupkg.sha512",
     "C:\\Users\\kucuk\\.nuget\\packages\\system.identitymodel.tokens.jwt\\6.21.0\\system.identitymodel.tokens.jwt.6.21.0.nupkg.sha512",
+    "C:\\Users\\kucuk\\.nuget\\packages\\system.memory\\4.5.4\\system.memory.4.5.4.nupkg.sha512",
     "C:\\Users\\kucuk\\.nuget\\packages\\system.security.accesscontrol\\5.0.0\\system.security.accesscontrol.5.0.0.nupkg.sha512",
     "C:\\Users\\kucuk\\.nuget\\packages\\system.security.cryptography.cng\\4.5.0\\system.security.cryptography.cng.4.5.0.nupkg.sha512",
-    "C:\\Users\\kucuk\\.nuget\\packages\\system.security.principal.windows\\5.0.0\\system.security.principal.windows.5.0.0.nupkg.sha512"
+    "C:\\Users\\kucuk\\.nuget\\packages\\system.security.principal.windows\\5.0.0\\system.security.principal.windows.5.0.0.nupkg.sha512",
+    "C:\\Users\\kucuk\\.nuget\\packages\\system.threading.channels\\4.7.1\\system.threading.channels.4.7.1.nupkg.sha512"
   ],
   "logs": []
 }
