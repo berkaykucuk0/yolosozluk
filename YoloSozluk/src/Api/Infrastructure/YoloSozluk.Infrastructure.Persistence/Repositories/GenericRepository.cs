@@ -204,7 +204,7 @@ namespace YoloSozluk.Infrastructure.Persistence.Repositories
 
             if (predicate != null)
             {
-                query.Where(predicate);
+                query = query.Where(predicate);
             }
                 
 

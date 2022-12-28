@@ -33,7 +33,7 @@ namespace YoloSozluk.Api.Application.Handlers.CommandHandlers
 
         public async Task<UserLoginViewModel> Handle(UserLoginCommand request, CancellationToken cancellationToken)
         {
-            var user = await _userRepo.FirstOrDefaultAsync(x => x.Email == request.EmailAddress);
+            var user = await _userRepo.GetSingleAsync(x => x.Email == request.EmailAddress);
 
             if (user == null)
                 throw new UserException("User not found!");
