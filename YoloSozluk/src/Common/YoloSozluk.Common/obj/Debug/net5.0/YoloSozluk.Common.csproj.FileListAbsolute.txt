@@ -7,6 +7,8 @@ C:\Users\kucuk\OneDrive\Belgeler\GitHub\yolosozluk\YoloSozluk\src\Common\YoloSoz
 C:\Users\kucuk\OneDrive\Belgeler\GitHub\yolosozluk\YoloSozluk\src\Common\YoloSozluk.Common\bin\Debug\net5.0\YoloSozluk.Common.dll
 C:\Users\kucuk\OneDrive\Belgeler\GitHub\yolosozluk\YoloSozluk\src\Common\YoloSozluk.Common\bin\Debug\net5.0\ref\YoloSozluk.Common.dll
 C:\Users\kucuk\OneDrive\Belgeler\GitHub\yolosozluk\YoloSozluk\src\Common\YoloSozluk.Common\bin\Debug\net5.0\YoloSozluk.Common.pdb
+C:\Users\kucuk\OneDrive\Belgeler\GitHub\yolosozluk\YoloSozluk\src\Common\YoloSozluk.Common\bin\Debug\net5.0\MediatR.dll
+C:\Users\kucuk\OneDrive\Belgeler\GitHub\yolosozluk\YoloSozluk\src\Common\YoloSozluk.Common\bin\Debug\net5.0\MediatR.Contracts.dll
 C:\Users\kucuk\OneDrive\Belgeler\GitHub\yolosozluk\YoloSozluk\src\Common\YoloSozluk.Common\bin\Debug\net5.0\Microsoft.Extensions.Configuration.dll
 C:\Users\kucuk\OneDrive\Belgeler\GitHub\yolosozluk\YoloSozluk\src\Common\YoloSozluk.Common\bin\Debug\net5.0\Microsoft.Extensions.Configuration.Abstractions.dll
 C:\Users\kucuk\OneDrive\Belgeler\GitHub\yolosozluk\YoloSozluk\src\Common\YoloSozluk.Common\bin\Debug\net5.0\Microsoft.Extensions.Configuration.Binder.dll
@@ -32,8 +34,15 @@ C:\Users\kucuk\OneDrive\Belgeler\GitHub\yolosozluk\YoloSozluk\src\Common\YoloSoz
 C:\Users\kucuk\OneDrive\Belgeler\GitHub\yolosozluk\YoloSozluk\src\Common\YoloSozluk.Common\bin\Debug\net5.0\Microsoft.Extensions.Options.dll
 C:\Users\kucuk\OneDrive\Belgeler\GitHub\yolosozluk\YoloSozluk\src\Common\YoloSozluk.Common\bin\Debug\net5.0\Microsoft.Extensions.Options.ConfigurationExtensions.dll
 C:\Users\kucuk\OneDrive\Belgeler\GitHub\yolosozluk\YoloSozluk\src\Common\YoloSozluk.Common\bin\Debug\net5.0\Microsoft.Extensions.Primitives.dll
+C:\Users\kucuk\OneDrive\Belgeler\GitHub\yolosozluk\YoloSozluk\src\Common\YoloSozluk.Common\bin\Debug\net5.0\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\kucuk\OneDrive\Belgeler\GitHub\yolosozluk\YoloSozluk\src\Common\YoloSozluk.Common\bin\Debug\net5.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\kucuk\OneDrive\Belgeler\GitHub\yolosozluk\YoloSozluk\src\Common\YoloSozluk.Common\bin\Debug\net5.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\kucuk\OneDrive\Belgeler\GitHub\yolosozluk\YoloSozluk\src\Common\YoloSozluk.Common\bin\Debug\net5.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\kucuk\OneDrive\Belgeler\GitHub\yolosozluk\YoloSozluk\src\Common\YoloSozluk.Common\bin\Debug\net5.0\RabbitMQ.Client.dll
 C:\Users\kucuk\OneDrive\Belgeler\GitHub\yolosozluk\YoloSozluk\src\Common\YoloSozluk.Common\bin\Debug\net5.0\System.Diagnostics.EventLog.dll
+C:\Users\kucuk\OneDrive\Belgeler\GitHub\yolosozluk\YoloSozluk\src\Common\YoloSozluk.Common\bin\Debug\net5.0\System.IdentityModel.Tokens.Jwt.dll
 C:\Users\kucuk\OneDrive\Belgeler\GitHub\yolosozluk\YoloSozluk\src\Common\YoloSozluk.Common\bin\Debug\net5.0\runtimes\win\lib\netcoreapp2.0\System.Diagnostics.EventLog.dll
+C:\Users\kucuk\OneDrive\Belgeler\GitHub\yolosozluk\YoloSozluk\src\Common\YoloSozluk.Common\obj\Debug\net5.0\YoloSozluk.Common.csproj.AssemblyReference.cache
 C:\Users\kucuk\OneDrive\Belgeler\GitHub\yolosozluk\YoloSozluk\src\Common\YoloSozluk.Common\obj\Debug\net5.0\YoloSozluk.Common.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\kucuk\OneDrive\Belgeler\GitHub\yolosozluk\YoloSozluk\src\Common\YoloSozluk.Common\obj\Debug\net5.0\YoloSozluk.Common.AssemblyInfoInputs.cache
 C:\Users\kucuk\OneDrive\Belgeler\GitHub\yolosozluk\YoloSozluk\src\Common\YoloSozluk.Common\obj\Debug\net5.0\YoloSozluk.Common.AssemblyInfo.cs
@@ -43,12 +52,3 @@ C:\Users\kucuk\OneDrive\Belgeler\GitHub\yolosozluk\YoloSozluk\src\Common\YoloSoz
 C:\Users\kucuk\OneDrive\Belgeler\GitHub\yolosozluk\YoloSozluk\src\Common\YoloSozluk.Common\obj\Debug\net5.0\ref\YoloSozluk.Common.dll
 C:\Users\kucuk\OneDrive\Belgeler\GitHub\yolosozluk\YoloSozluk\src\Common\YoloSozluk.Common\obj\Debug\net5.0\YoloSozluk.Common.pdb
 C:\Users\kucuk\OneDrive\Belgeler\GitHub\yolosozluk\YoloSozluk\src\Common\YoloSozluk.Common\obj\Debug\net5.0\YoloSozluk.Common.genruntimeconfig.cache
-C:\Users\kucuk\OneDrive\Belgeler\GitHub\yolosozluk\YoloSozluk\src\Common\YoloSozluk.Common\obj\Debug\net5.0\YoloSozluk.Common.csproj.AssemblyReference.cache
-C:\Users\kucuk\OneDrive\Belgeler\GitHub\yolosozluk\YoloSozluk\src\Common\YoloSozluk.Common\bin\Debug\net5.0\MediatR.dll
-C:\Users\kucuk\OneDrive\Belgeler\GitHub\yolosozluk\YoloSozluk\src\Common\YoloSozluk.Common\bin\Debug\net5.0\MediatR.Contracts.dll
-C:\Users\kucuk\OneDrive\Belgeler\GitHub\yolosozluk\YoloSozluk\src\Common\YoloSozluk.Common\bin\Debug\net5.0\Microsoft.IdentityModel.Abstractions.dll
-C:\Users\kucuk\OneDrive\Belgeler\GitHub\yolosozluk\YoloSozluk\src\Common\YoloSozluk.Common\bin\Debug\net5.0\Microsoft.IdentityModel.JsonWebTokens.dll
-C:\Users\kucuk\OneDrive\Belgeler\GitHub\yolosozluk\YoloSozluk\src\Common\YoloSozluk.Common\bin\Debug\net5.0\Microsoft.IdentityModel.Logging.dll
-C:\Users\kucuk\OneDrive\Belgeler\GitHub\yolosozluk\YoloSozluk\src\Common\YoloSozluk.Common\bin\Debug\net5.0\Microsoft.IdentityModel.Tokens.dll
-C:\Users\kucuk\OneDrive\Belgeler\GitHub\yolosozluk\YoloSozluk\src\Common\YoloSozluk.Common\bin\Debug\net5.0\System.IdentityModel.Tokens.Jwt.dll
-C:\Users\kucuk\OneDrive\Belgeler\GitHub\yolosozluk\YoloSozluk\src\Common\YoloSozluk.Common\bin\Debug\net5.0\RabbitMQ.Client.dll
