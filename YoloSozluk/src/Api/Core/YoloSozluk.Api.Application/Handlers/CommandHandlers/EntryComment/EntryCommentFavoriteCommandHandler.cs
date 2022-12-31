@@ -14,7 +14,7 @@ namespace YoloSozluk.Api.Application.Handlers.CommandHandlers.EntryComment
 
         public async Task<bool> Handle(EntryCommentFavoriteCommand request, CancellationToken cancellationToken)
         {
-            QueueFactory.SendMessageToExchange(exchangeName: Constants.EntryCommentExchangeName,
+            QueueFactory.SendMessageToExchange(exchangeName: Constants.FavoriteExchangeName,
                                                    exchangeType: Constants.ExchangeType,
                                                    queueName: Constants.EntryCommentFavoriteCreateQueueName,
                                                    obj: new EntryCommentFavoriteCreateEvent() { 

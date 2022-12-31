@@ -14,8 +14,12 @@ namespace YoloSozluk.Common
         public const string UserEmailChangedExchangeName = "UserEmailChangedExchange";
         public const string UserEmailChangedQueueName = "UserEmailChangedQueue";
 
-        public const string EntryCommentExchangeName = "EntryCommentExchange";
-        public const string EntryCommentFavoriteCreateQueueName = "UserEmailChangedQueue";
+        public const string FavoriteExchangeName = "FavoriteExchange";
+        public const string EntryCommentFavoriteCreateQueueName = "EntryCommentFavoriteCreateQueue";
+        public const string EntryFavoriteCreateQueueName = "EntryFavoriteCreateQueue";
 
+
+        public const string EntryVoteExchangeName = "EntryVoteExchange";
+        public const string EntryVoteCreateQueueName = "EntryVoteCreateQueue";
     }
 }
