@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+﻿
 namespace YoloSozluk.Common
 {
     public class Constants
@@ -21,5 +16,7 @@ namespace YoloSozluk.Common
 
         public const string EntryVoteExchangeName = "EntryVoteExchange";
         public const string EntryVoteCreateQueueName = "EntryVoteCreateQueue";
+        public const string EntryVoteDeleteQueueName = "EntryVoteDeleteQueue";
     }
+}
 }
