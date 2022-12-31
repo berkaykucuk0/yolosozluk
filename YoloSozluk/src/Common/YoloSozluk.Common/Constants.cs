@@ -17,6 +17,10 @@ namespace YoloSozluk.Common
         public const string EntryVoteExchangeName = "EntryVoteExchange";
         public const string EntryVoteCreateQueueName = "EntryVoteCreateQueue";
         public const string EntryVoteDeleteQueueName = "EntryVoteDeleteQueue";
+
+
+        public const string EntryCommentVoteExchangeName = "EntryCommentVoteExchange";
+        public const string EntryCommentVoteCreateQueueName = "EntryCommentVoteCreateQueue";
     }
 }
 }
