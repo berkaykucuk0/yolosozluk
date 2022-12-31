@@ -55,8 +55,6 @@ namespace YoloSozluk.Api.Application.Handlers.CommandHandlers.User
                 await _userRepo.UpdateAsync(user);
             }
 
-
-
             return response > 0 ;
 
             //EMAIL CONFIRMATION WILL ADD
