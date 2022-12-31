@@ -1,9 +1,4 @@
 ﻿using FluentValidation;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using YoloSozluk.Common.Models.Commands;
 
 namespace YoloSozluk.Api.Application.Validators
