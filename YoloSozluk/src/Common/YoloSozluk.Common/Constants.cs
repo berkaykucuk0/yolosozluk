@@ -17,7 +17,7 @@ namespace YoloSozluk.Common
         public const string FavoriteExchangeName = "FavoriteExchange";
         public const string EntryCommentFavoriteCreateQueueName = "EntryCommentFavoriteCreateQueue";
         public const string EntryFavoriteCreateQueueName = "EntryFavoriteCreateQueue";
-
+        public const string EntryFavoriteDeleteQueueName = "EntryFavoriteDeleteQueue";
 
         public const string EntryVoteExchangeName = "EntryVoteExchange";
         public const string EntryVoteCreateQueueName = "EntryVoteCreateQueue";
