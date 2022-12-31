@@ -9,6 +9,7 @@ namespace YoloSozluk.Api.Application.Mapping
         public EntryMapper()
         {
             CreateMap<EntryCreateCommand, Entry>().ReverseMap();
+            CreateMap<EntryCommentCreateCommand, EntryComment>().ReverseMap();
         }
     }
 }
