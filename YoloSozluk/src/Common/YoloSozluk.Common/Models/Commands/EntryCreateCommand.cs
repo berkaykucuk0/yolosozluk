@@ -11,7 +11,7 @@ namespace YoloSozluk.Common.Models.Commands
     {
         public string Subject { get; set; }
         public string Content { get; set; }
-        public Guid CreatedUserId { get; set; }
+        public Guid? CreatedUserId { get; set; }
 
         public EntryCreateCommand()
         {

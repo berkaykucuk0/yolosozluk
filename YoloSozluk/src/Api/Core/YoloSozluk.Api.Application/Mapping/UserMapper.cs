@@ -16,6 +16,7 @@ namespace YoloSozluk.Api.Application.Mapping.UserMapping
         {
             CreateMap<User, UserLoginViewModel>().ReverseMap();
             CreateMap<User, UserCreateCommand>().ReverseMap();
+            CreateMap<User, UserUpdateCommand>().ReverseMap();
         }
     }
 }
