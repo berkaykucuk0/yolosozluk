@@ -10,7 +10,7 @@ namespace YoloSozluk.Api.WebApi.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class UserController : ControllerBase
+    public class UserController : BaseController
     {
         private readonly IMediator _mediator;
 
@@ -27,7 +27,7 @@ namespace YoloSozluk.Api.WebApi.Controllers
             return Ok(res);
         }
 
-        [HttpPost]
+        [HttpPost]  
         [Route("Create")]
         public async Task<IActionResult> Create([FromBody] UserCreateCommand command)
         {
@@ -40,6 +40,24 @@ namespace YoloSozluk.Api.WebApi.Controllers
         [Route("Update")]
         public async Task<IActionResult> Update([FromBody] UserUpdateCommand command)
         {
+            var res = await _mediator.Send(command);
+            return Ok(res);
+        }
+
+        [HttpPost]
+        [Route("Confirm")]
+        public async Task<IActionResult> ConfirmEMail(Guid id)
+        {
+            var res = await _mediator.Send(new UserConfirmEmailCommand { ConfirmationId = id } );
+            return Ok(res);
+        }
+
+        [HttpPost]
+        [Route("ChangePassword")]
+        public async Task<IActionResult> ChangPassword([FromBody] UserChangePasswordCommand command)
+        {
+            if (!command.UserId.HasValue)
+                command.UserId = UserId;
             var res = await _mediator.Send(command);
             return Ok(res);
         }

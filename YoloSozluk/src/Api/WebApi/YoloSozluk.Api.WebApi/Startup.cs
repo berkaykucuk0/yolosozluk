@@ -11,6 +11,7 @@ using Microsoft.OpenApi.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text.Json.Serialization;
 using System.Threading.Tasks;
 using YoloSozluk.Api.Application.Extensions;
 using YoloSozluk.Infrastructure.Persistence.Context;
@@ -37,6 +38,12 @@ namespace YoloSozluk.Api.WebApi
 
             services.AddDbContext<YoloSozlukContext>();
             services.AddControllers().AddFluentValidation();
+
+            //services.AddControllers()
+            //.AddJsonOptions(options =>
+            //{
+            //    options.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.IgnoreCycles;
+            //});
 
 
             services.AddSwaggerGen(c =>

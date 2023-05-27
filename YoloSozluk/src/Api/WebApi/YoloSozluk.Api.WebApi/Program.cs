@@ -5,6 +5,8 @@ using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text.Json;
+using System.Text.Json.Serialization;
 using System.Threading.Tasks;
 
 namespace YoloSozluk.Api.WebApi
@@ -14,6 +16,8 @@ namespace YoloSozluk.Api.WebApi
         public static void Main(string[] args)
         {
             CreateHostBuilder(args).Build().Run();
+
+         
         }
 
         public static IHostBuilder CreateHostBuilder(string[] args) =>

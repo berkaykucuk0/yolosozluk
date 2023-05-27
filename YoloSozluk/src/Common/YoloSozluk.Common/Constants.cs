@@ -26,4 +26,4 @@ namespace YoloSozluk.Common
         public const string EntryCommentVoteDeleteQueueName = "EntryCommentVoteDeleteQueue";
     }
 }
-}
+

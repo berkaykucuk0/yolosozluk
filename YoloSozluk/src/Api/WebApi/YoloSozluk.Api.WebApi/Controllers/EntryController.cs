@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using YoloSozluk.Common.Models.Commands;
+using YoloSozluk.Common.Models.Queries;
 
 namespace YoloSozluk.Api.WebApi.Controllers
 {
@@ -18,6 +19,13 @@ namespace YoloSozluk.Api.WebApi.Controllers
        {
            _mediator = mediator;
        }
+
+        [HttpGet]
+        public async Task<IActionResult> GetEntries([FromQuery] GetEntriesQuery query)
+        {
+            var res = await _mediator.Send(query);
+            return Ok(res);
+        }
 
        [HttpPost]
        [Route("CreateEntry")]

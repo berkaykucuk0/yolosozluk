@@ -35,7 +35,7 @@ namespace YoloSozluk.Api.Application.Handlers.CommandHandlers.User
             if (user.Password != hashedPassword)
                 throw new UserException("Wrong Old Password!");
 
-            user.Password = hashedPassword;
+            user.Password = Encryptor.Encrypt(request.NewPassword);
 
             await _userRepo.UpdateAsync(user);
 
