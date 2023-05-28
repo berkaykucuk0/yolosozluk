@@ -9,6 +9,6 @@ namespace YoloSozluk.Api.WebApi.Controllers
 {
     public class BaseController : ControllerBase
     {
-        public Guid UserId => new Guid(HttpContext.User.FindFirst(ClaimTypes.NameIdentifier)?.Value);   
+        public Guid UserId => new Guid(); //new Guid(HttpContext.User.FindFirst(ClaimTypes.NameIdentifier)?.Value);   
     }
 }

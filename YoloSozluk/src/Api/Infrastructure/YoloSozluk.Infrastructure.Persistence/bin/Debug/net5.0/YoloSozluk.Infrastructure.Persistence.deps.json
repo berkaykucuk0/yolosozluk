@@ -1493,6 +1493,7 @@
       "YoloSozluk.Common/1.0.0": {
         "dependencies": {
           "MediatR": "10.0.1",
+          "Microsoft.EntityFrameworkCore": "5.0.17",
           "Microsoft.Extensions.Hosting": "5.0.0",
           "Microsoft.IdentityModel.Tokens": "6.21.0",
           "RabbitMQ.Client": "6.4.0",

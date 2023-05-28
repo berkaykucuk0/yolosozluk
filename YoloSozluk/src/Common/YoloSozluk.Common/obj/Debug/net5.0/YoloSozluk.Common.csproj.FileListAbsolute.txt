@@ -52,3 +52,8 @@ C:\Users\kucuk\OneDrive\Belgeler\GitHub\yolosozluk\YoloSozluk\src\Common\YoloSoz
 C:\Users\kucuk\OneDrive\Belgeler\GitHub\yolosozluk\YoloSozluk\src\Common\YoloSozluk.Common\obj\Debug\net5.0\ref\YoloSozluk.Common.dll
 C:\Users\kucuk\OneDrive\Belgeler\GitHub\yolosozluk\YoloSozluk\src\Common\YoloSozluk.Common\obj\Debug\net5.0\YoloSozluk.Common.pdb
 C:\Users\kucuk\OneDrive\Belgeler\GitHub\yolosozluk\YoloSozluk\src\Common\YoloSozluk.Common\obj\Debug\net5.0\YoloSozluk.Common.genruntimeconfig.cache
+C:\Users\kucuk\OneDrive\Belgeler\GitHub\yolosozluk\YoloSozluk\src\Common\YoloSozluk.Common\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.dll
+C:\Users\kucuk\OneDrive\Belgeler\GitHub\yolosozluk\YoloSozluk\src\Common\YoloSozluk.Common\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\kucuk\OneDrive\Belgeler\GitHub\yolosozluk\YoloSozluk\src\Common\YoloSozluk.Common\bin\Debug\net5.0\Microsoft.Extensions.Caching.Abstractions.dll
+C:\Users\kucuk\OneDrive\Belgeler\GitHub\yolosozluk\YoloSozluk\src\Common\YoloSozluk.Common\bin\Debug\net5.0\Microsoft.Extensions.Caching.Memory.dll
+C:\Users\kucuk\OneDrive\Belgeler\GitHub\yolosozluk\YoloSozluk\src\Common\YoloSozluk.Common\bin\Debug\net5.0\System.Diagnostics.DiagnosticSource.dll

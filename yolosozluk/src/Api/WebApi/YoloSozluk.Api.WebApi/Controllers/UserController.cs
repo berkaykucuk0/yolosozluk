@@ -53,7 +53,7 @@ namespace YoloSozluk.Api.WebApi.Controllers
         }
 
         [HttpPost]
-        [Route("Confirm")]
+        [Route("ChangePassword")]
         public async Task<IActionResult> ChangPassword([FromBody] UserChangePasswordCommand command)
         {
             if (!command.UserId.HasValue)

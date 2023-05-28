@@ -15,7 +15,8 @@ namespace YoloSozluk.Common.Models.ViewModels
         }
         public PagedViewModel(IList<T> results, Page pageInfo)
         {
-
+            Results = results;
+            PageInfo = pageInfo;
         }
 
         public IList<T> Results { get; set; }

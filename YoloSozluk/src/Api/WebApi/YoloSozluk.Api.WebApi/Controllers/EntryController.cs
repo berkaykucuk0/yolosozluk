@@ -23,7 +23,15 @@ namespace YoloSozluk.Api.WebApi.Controllers
         [HttpGet]
         public async Task<IActionResult> GetEntries([FromQuery] GetEntriesQuery query)
         {
-            var res = await _mediator.Send(query);
+            var res = await _mediator.Send(query);  
+            return Ok(res);
+        }
+
+        [HttpGet]
+        [Route("GetMainPageEntries")]
+        public async Task<IActionResult> GetMainPageEntries(int page,int pageSize)
+        {   
+            var res = await _mediator.Send(new GetMainPageEntriesQuery(UserId,page,pageSize));
             return Ok(res);
         }
 
