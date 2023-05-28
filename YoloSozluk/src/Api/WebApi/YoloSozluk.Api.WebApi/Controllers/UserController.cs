@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using YoloSozluk.Common.Models.Commands;
+using YoloSozluk.Common.Models.Queries;
 
 namespace YoloSozluk.Api.WebApi.Controllers
 {
@@ -18,6 +19,21 @@ namespace YoloSozluk.Api.WebApi.Controllers
         {
             _mediator = mediator;
         }
+
+        [HttpGet("{id}")]
+        public async Task<IActionResult> Get(Guid id)
+        {
+            var user = await _mediator.Send(new GetUserDetailQuery(id));
+            return Ok(user);
+        }
+
+        [HttpGet("{UserName/}{id}")]
+        public async Task<IActionResult> GetByUserName(string userName)
+        {
+            var user = await _mediator.Send(new GetUserDetailQuery(Guid.Empty, userName));
+            return Ok(user);
+        }
+
 
         [HttpPost]
         [Route("Login")]
