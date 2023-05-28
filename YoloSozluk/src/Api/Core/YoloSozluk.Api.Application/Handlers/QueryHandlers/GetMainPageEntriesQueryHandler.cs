@@ -37,6 +37,7 @@ namespace YoloSozluk.Api.Application.Handlers.QueryHandlers
                  Subject = x.Subject,
                  Content = x.Content,
                  IsFavorited = request.UserId.HasValue && x.EntryFavourites.Any(y=>y.CreatedById == request.UserId),
+                 FavoritedCount = x.EntryFavourites.Count,
                  CreatedDate = x.CreateDate,
                  CreatedByUserName = x.CreatedBy.UserName,
                  VoteType = request.UserId.HasValue && 
@@ -45,7 +46,7 @@ namespace YoloSozluk.Api.Application.Handlers.QueryHandlers
 
             var entries = await list.GetPaged(request.Page, request.PageSize);
 
-            return new PagedViewModel<GetEntryDetailViewModel>(entries.Results, entries.PageInfo);
+            return entries;
         }
     }
 }
