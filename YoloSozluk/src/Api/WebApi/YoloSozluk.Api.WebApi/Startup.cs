@@ -20,6 +20,7 @@ using YoloSozluk.Api.WebApi.Extensions;
 using TechBuddy.Middlewares.ExceptionHandling;
 using System.Net;
 using YoloSozluk.Common.Exceptions.User;
+using Serilog;
 
 namespace YoloSozluk.Api.WebApi
 {
@@ -39,7 +40,8 @@ namespace YoloSozluk.Api.WebApi
             services.AddInfrastructureRegistration(Configuration);
             services.AddApplicationRegistration();
 
-
+            services.AddLogging();
+        
             services.AddDbContext<YoloSozlukContext>();
             services.AddControllers().AddFluentValidation();
 

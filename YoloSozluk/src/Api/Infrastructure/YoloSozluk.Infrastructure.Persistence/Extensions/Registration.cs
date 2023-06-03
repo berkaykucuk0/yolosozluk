@@ -34,6 +34,7 @@ namespace YoloSozluk.Infrastructure.Persistence.Extensions
             services.AddScoped<IEmailConfirmationRepository, EmailConfirmationRepository>();
             services.AddScoped<TokenGenerator>();
 
+
             return services;
         }
     }

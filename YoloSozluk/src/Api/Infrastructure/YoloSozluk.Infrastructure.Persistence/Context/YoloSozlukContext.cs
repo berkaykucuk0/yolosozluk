@@ -42,6 +42,7 @@ namespace YoloSozluk.Infrastructure.Persistence.Context
                 var cnnStr = "Server=DESKTOP-JAS67L4\\SQLEXPRESS;Database=YoloSozlukDB;Trusted_Connection=True;";
                 optionsBuilder.UseSqlServer(cnnStr);
             }
+
             base.OnConfiguring(optionsBuilder);     
         }
 

@@ -1,5 +1,6 @@
 ﻿using MediatR;
 using Microsoft.AspNetCore.Mvc;
+using Serilog;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,15 +15,17 @@ namespace YoloSozluk.Api.WebApi.Controllers
     public class EntryController : BaseController
     {
        private readonly IMediator _mediator;
-
-       public EntryController(IMediator mediator)
-       {
-           _mediator = mediator;
-       }
+        private readonly ILogger _logger;
+        public EntryController(IMediator mediator, ILogger logger)
+        {
+            _mediator = mediator;
+            _logger = logger;
+        }
 
         [HttpGet]
         public async Task<IActionResult> GetEntries([FromQuery] GetEntriesQuery query)
         {
+            _logger.Information($"Start : Getting item details for {query}", query);
             var res = await _mediator.Send(query);  
             return Ok(res);
         }
