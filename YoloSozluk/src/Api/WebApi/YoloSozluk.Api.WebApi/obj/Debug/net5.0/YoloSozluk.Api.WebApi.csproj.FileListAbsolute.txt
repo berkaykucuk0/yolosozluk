@@ -37,7 +37,6 @@ C:\Users\kucuk\OneDrive\Belgeler\GitHub\yolosozluk\YoloSozluk\src\Api\WebApi\Yol
 C:\Users\kucuk\OneDrive\Belgeler\GitHub\yolosozluk\YoloSozluk\src\Api\WebApi\YoloSozluk.Api.WebApi\bin\Debug\net5.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
 C:\Users\kucuk\OneDrive\Belgeler\GitHub\yolosozluk\YoloSozluk\src\Api\WebApi\YoloSozluk.Api.WebApi\bin\Debug\net5.0\Microsoft.IdentityModel.Tokens.dll
 C:\Users\kucuk\OneDrive\Belgeler\GitHub\yolosozluk\YoloSozluk\src\Api\WebApi\YoloSozluk.Api.WebApi\bin\Debug\net5.0\Microsoft.OpenApi.dll
-C:\Users\kucuk\OneDrive\Belgeler\GitHub\yolosozluk\YoloSozluk\src\Api\WebApi\YoloSozluk.Api.WebApi\bin\Debug\net5.0\Newtonsoft.Json.dll
 C:\Users\kucuk\OneDrive\Belgeler\GitHub\yolosozluk\YoloSozluk\src\Api\WebApi\YoloSozluk.Api.WebApi\bin\Debug\net5.0\RabbitMQ.Client.dll
 C:\Users\kucuk\OneDrive\Belgeler\GitHub\yolosozluk\YoloSozluk\src\Api\WebApi\YoloSozluk.Api.WebApi\bin\Debug\net5.0\Swashbuckle.AspNetCore.Swagger.dll
 C:\Users\kucuk\OneDrive\Belgeler\GitHub\yolosozluk\YoloSozluk\src\Api\WebApi\YoloSozluk.Api.WebApi\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerGen.dll
@@ -83,3 +82,5 @@ C:\Users\kucuk\OneDrive\Belgeler\GitHub\yolosozluk\YoloSozluk\src\Api\WebApi\Yol
 C:\Users\kucuk\OneDrive\Belgeler\GitHub\yolosozluk\YoloSozluk\src\Api\WebApi\YoloSozluk.Api.WebApi\obj\Debug\net5.0\ref\YoloSozluk.Api.WebApi.dll
 C:\Users\kucuk\OneDrive\Belgeler\GitHub\yolosozluk\YoloSozluk\src\Api\WebApi\YoloSozluk.Api.WebApi\obj\Debug\net5.0\YoloSozluk.Api.WebApi.pdb
 C:\Users\kucuk\OneDrive\Belgeler\GitHub\yolosozluk\YoloSozluk\src\Api\WebApi\YoloSozluk.Api.WebApi\obj\Debug\net5.0\YoloSozluk.Api.WebApi.genruntimeconfig.cache
+C:\Users\kucuk\OneDrive\Belgeler\GitHub\yolosozluk\YoloSozluk\src\Api\WebApi\YoloSozluk.Api.WebApi\bin\Debug\net5.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\kucuk\OneDrive\Belgeler\GitHub\yolosozluk\YoloSozluk\src\Api\WebApi\YoloSozluk.Api.WebApi\bin\Debug\net5.0\TechBuddy.Middlewares.ExceptionHandling.dll

@@ -16,6 +16,10 @@ using System.Threading.Tasks;
 using YoloSozluk.Api.Application.Extensions;
 using YoloSozluk.Infrastructure.Persistence.Context;
 using YoloSozluk.Infrastructure.Persistence.Extensions;
+using YoloSozluk.Api.WebApi.Extensions;
+using TechBuddy.Middlewares.ExceptionHandling;
+using System.Net;
+using YoloSozluk.Common.Exceptions.User;
 
 namespace YoloSozluk.Api.WebApi
 {
@@ -39,13 +43,7 @@ namespace YoloSozluk.Api.WebApi
             services.AddDbContext<YoloSozlukContext>();
             services.AddControllers().AddFluentValidation();
 
-            //services.AddControllers()
-            //.AddJsonOptions(options =>
-            //{
-            //    options.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.IgnoreCycles;
-            //});
-
-
+            services.ConfigureAuth(conf: Configuration);
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "YoloSozluk.Api.WebApi", Version = "v1" });
@@ -60,17 +58,36 @@ namespace YoloSozluk.Api.WebApi
                 app.UseSwagger();
                 app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "YoloSozluk.Api.WebApi v1"));
             }
+          
 
             app.UseHttpsRedirection();
 
             app.UseRouting();
 
+            app.UseAuthentication();
             app.UseAuthorization();
+
+            app.AddTBExceptionHandlingMiddleware(opt =>
+            {
+                opt.IsDevelopment = env.IsDevelopment();
+                opt.DefaultHttpStatusCode = HttpStatusCode.InternalServerError;
+                opt.ContentType = "application/json";
+                opt.DefaultMessage = "An Unexpected Error Occured!";
+               
+                opt.ExceptionTypeList.Add<Exception>();
+                opt.ExceptionTypeList.Add<ArgumentNullException>();
+                opt.ExceptionTypeList.Add<UserException>();
+                opt.ExceptionTypeList.Add<EntryException>();
+                opt.ExceptionTypeList.Add<UserMailConfirmationException>();
+            });
 
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
             });
+
+
+
         }
     }
 }

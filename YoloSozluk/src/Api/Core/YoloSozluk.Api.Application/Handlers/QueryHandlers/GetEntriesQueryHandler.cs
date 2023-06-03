@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using YoloSozluk.Api.Application.IRepositories;
+using YoloSozluk.Common.Exceptions.User;
 using YoloSozluk.Common.Models.Queries;
 using YoloSozluk.Common.Models.ViewModels; 
 
@@ -27,6 +28,8 @@ namespace YoloSozluk.Api.Application.Handlers.QueryHandlers
 
         public async Task<List<GetEntriesViewModel>> Handle(GetEntriesQuery request, CancellationToken cancellationToken)
         {
+
+            throw new EntryException("Entry not found!");
             var query = _entryRepo.AsQueryAble();
             if (request.TodaysEntries)
             {

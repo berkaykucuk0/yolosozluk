@@ -27,7 +27,7 @@ namespace YoloSozluk.Api.WebApi.Controllers
             return Ok(user);
         }
 
-        [HttpGet("{UserName/}{id}")]
+        [HttpGet("{UserName}/{id}")]
         public async Task<IActionResult> GetByUserName(string userName)
         {
             var user = await _mediator.Send(new GetUserDetailQuery(Guid.Empty, userName));
