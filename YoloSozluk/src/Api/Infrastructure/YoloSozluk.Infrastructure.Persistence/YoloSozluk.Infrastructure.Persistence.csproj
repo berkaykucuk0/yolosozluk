@@ -13,11 +13,13 @@
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
+    <PackageReference Include="Serilog.AspNetCore" Version="5.0.0" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\..\Core\YoloSozluk.Api.Application\YoloSozluk.Api.Application.csproj" />
     <ProjectReference Include="..\..\Core\YoloSozluk.Api.Domain\YoloSozluk.Api.Domain.csproj" />
+    
   </ItemGroup>
 
 </Project>

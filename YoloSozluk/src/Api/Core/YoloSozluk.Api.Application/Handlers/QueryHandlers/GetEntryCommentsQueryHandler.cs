@@ -7,6 +7,7 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using YoloSozluk.Api.Application.IRepositories;
+using YoloSozluk.Common;
 using YoloSozluk.Common.Enums;
 using YoloSozluk.Common.Extensions;
 using YoloSozluk.Common.Models.Queries;
@@ -24,27 +25,36 @@ namespace YoloSozluk.Api.Application.Handlers.QueryHandlers
         }
         public async Task<PagedViewModel<GetEntryCommentsViewModel>> Handle(GetEntryCommentsQuery request, CancellationToken cancellationToken)
         {
-            var query = _entryCommentRepo.AsQueryAble();
-            query = query.Include(x => x.EntryCommentFavourites)
-                         .Include(x => x.CreatedBy)
-                         .Include(x => x.EntryCommentVotes)
-                         .Where(x=>x.EntryId == request.EntryId);
-
-            var list = query.Select(x => new GetEntryCommentsViewModel
+            try
             {
-                Id = x.Id,
-                Content = x.Content,
-                IsFavorited = request.UserId.HasValue && x.EntryCommentFavourites.Any(y => y.CreatedById == request.UserId),
-                FavoritedCount = x.EntryCommentFavourites.Count,
-                CreatedDate = x.CreateDate,
-                CreatedByUserName = x.CreatedBy.UserName,
-                VoteType = request.UserId.HasValue &&
-                            x.EntryCommentVotes.Any(y => y.CreatedById == request.UserId) ? x.EntryCommentVotes.FirstOrDefault(y => y.CreatedById == request.UserId).VoteType : VoteType.None
-            });
+                var query = _entryCommentRepo.AsQueryAble();
+                query = query.Include(x => x.EntryCommentFavourites)
+                             .Include(x => x.CreatedBy)
+                             .Include(x => x.EntryCommentVotes)
+                             .Where(x => x.EntryId == request.EntryId);
 
-            var comments = await list.GetPaged(request.Page, request.PageSize);
+                var list = query.Select(x => new GetEntryCommentsViewModel
+                {
+                    Id = x.Id,
+                    Content = x.Content,
+                    IsFavorited = request.UserId.HasValue && x.EntryCommentFavourites.Any(y => y.CreatedById == request.UserId),
+                    FavoritedCount = x.EntryCommentFavourites.Count,
+                    CreatedDate = x.CreateDate,
+                    CreatedByUserName = x.CreatedBy.UserName,
+                    VoteType = request.UserId.HasValue &&
+                                x.EntryCommentVotes.Any(y => y.CreatedById == request.UserId) ? x.EntryCommentVotes.FirstOrDefault(y => y.CreatedById == request.UserId).VoteType : VoteType.None
+                });
 
-            return comments;
+                var comments = await list.GetPaged(request.Page, request.PageSize);
+
+                return comments;
+
+            }
+            catch (Exception ex)
+            {
+                LoggingExtension.YoloErrorLog(ex, nameof(GetEntryCommentsQueryHandler), request);
+                throw;
+            }
         }
     }
 }

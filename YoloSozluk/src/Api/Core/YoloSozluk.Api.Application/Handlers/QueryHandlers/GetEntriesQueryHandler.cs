@@ -5,13 +5,12 @@ using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using YoloSozluk.Api.Application.IRepositories;
-using YoloSozluk.Common.Exceptions.User;
+using YoloSozluk.Common;
 using YoloSozluk.Common.Models.Queries;
-using YoloSozluk.Common.Models.ViewModels; 
+using YoloSozluk.Common.Models.ViewModels;
 
 namespace YoloSozluk.Api.Application.Handlers.QueryHandlers
 {
@@ -28,21 +27,28 @@ namespace YoloSozluk.Api.Application.Handlers.QueryHandlers
 
         public async Task<List<GetEntriesViewModel>> Handle(GetEntriesQuery request, CancellationToken cancellationToken)
         {
-
-            throw new EntryException("Entry not found!");
-            var query = _entryRepo.AsQueryAble();
-            if (request.TodaysEntries)
+            try
             {
-                query = query.Where(x => x.CreateDate >= DateTime.Now.Date)
-                             .Where(x => x.CreateDate <= DateTime.Now.AddDays(1).Date);
+                var query = _entryRepo.AsQueryAble();
+                if (request.TodaysEntries)
+                {
+                    query = query.Where(x => x.CreateDate >= DateTime.Now.Date)
+                                 .Where(x => x.CreateDate <= DateTime.Now.AddDays(1).Date);
+                }
+
+                query = query.Include(x => x.EntryComments)
+                     .OrderBy(x => x.CreateDate)
+                     .Take(request.Count);
+
+                //Projectto sql den select alırken GetEntriesViewModel içerisindeki alanları select etmek amacıyla , hepsini yapmıyor
+                return await query.ProjectTo<GetEntriesViewModel>(_mapper.ConfigurationProvider).ToListAsync(cancellationToken);
+
             }
-
-            query = query.Include(x => x.EntryComments) 
-                 .OrderBy(x => x.CreateDate)
-                 .Take(request.Count);
-
-            //Projectto sql den select alırken GetEntriesViewModel içerisindeki alanları select etmek amacıyla , hepsini yapmıyor
-            return await query.ProjectTo<GetEntriesViewModel>(_mapper.ConfigurationProvider).ToListAsync(cancellationToken);
+            catch (Exception ex)
+            {
+                LoggingExtension.YoloErrorLog(ex, nameof(GetEntriesQueryHandler), request);
+                throw;
+            }
         }
     }
 }

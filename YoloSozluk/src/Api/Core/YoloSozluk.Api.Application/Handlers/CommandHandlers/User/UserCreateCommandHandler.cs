@@ -28,33 +28,40 @@ namespace YoloSozluk.Api.Application.Handlers.CommandHandlers.User
 
         public async Task<bool> Handle(UserCreateCommand request, CancellationToken cancellationToken)
         {
-            var existUser = await  _userRepo.GetSingleAsync(x => x.Email == request.Email);
-
-            if (existUser !=null)
-                throw new UserException("User already exist with this email!");
-
-
-            request.Password = Encryptor.Encrypt(request.Password);
-
-            var user = _mapper.Map<Domain.Entities.User>(request);
-            var response = await _userRepo.AddAsync(user);
-
-            return true;
-
-            if (response > 0)
+            
+            try
             {
-                var @event = new UserEmailChangedEvent
+                var existUser = await _userRepo.GetSingleAsync(x => x.Email == request.Email);
+
+                if (existUser != null)
+                    throw new UserException("User already exist with this email!");
+
+                request.Password = Encryptor.Encrypt(request.Password);
+
+                var user = _mapper.Map<Domain.Entities.User>(request);
+                var response = await _userRepo.AddAsync(user);
+
+                if (response > 0)
                 {
-                    NewEmail = user.Email,
-                    OldEmail = null
-                };
+                    var @event = new UserEmailChangedEvent
+                    {
+                        NewEmail = user.Email,
+                        OldEmail = null
+                    };
 
-                QueueFactory.SendMessageToExchange(exchangeName: Constants.UserEmailChangedExchangeName,
-                                                   exchangeType: Constants.ExchangeType,
-                                                   queueName: Constants.UserEmailChangedQueueName,
-                                                   obj: @event);
+                    QueueFactory.SendMessageToExchange(exchangeName: Constants.UserEmailChangedExchangeName,
+                                                       exchangeType: Constants.ExchangeType,
+                                                       queueName: Constants.UserEmailChangedQueueName,
+                                                       obj: @event);
+                }
+
+                return true;
             }
-
+            catch (Exception ex)
+            {
+                LoggingExtension.YoloErrorLog(ex, nameof(UserCreateCommandHandler), request);
+                throw;
+            }
         }
     }
 }

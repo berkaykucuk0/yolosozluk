@@ -7,6 +7,7 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using YoloSozluk.Api.Application.IRepositories;
+using YoloSozluk.Common;
 using YoloSozluk.Common.Models.Queries;
 using YoloSozluk.Common.Models.ViewModels;
 
@@ -22,11 +23,17 @@ namespace YoloSozluk.Api.Application.Handlers.QueryHandlers
         }
         public async Task<List<SearchEntryViewModel>> Handle(SearchEntryQuery request, CancellationToken cancellationToken)
         {
-
-            //Burada text uzunluğu kontrol edilebilir.
-            var result = _entryRepo.Get(x => EF.Functions.Like(x.Subject, $"{request.SearchText}%")).Select(x => new SearchEntryViewModel { Id = x.Id, Subject = x.Subject });
-
-            return await result.ToListAsync();
+            try
+            {
+                //Burada text uzunluğu kontrol edilebilir.
+                var result = _entryRepo.Get(x => EF.Functions.Like(x.Subject, $"{request.SearchText}%")).Select(x => new SearchEntryViewModel { Id = x.Id, Subject = x.Subject });
+                return await result.ToListAsync();
+            }
+            catch (Exception ex)
+            {
+                LoggingExtension.YoloErrorLog(ex, nameof(SearchEntryQueryHandler), request);
+                throw;
+            }
         }
     }
 }

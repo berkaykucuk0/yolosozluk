@@ -16,16 +16,25 @@ namespace YoloSozluk.Api.Application.Handlers.CommandHandlers
     {
         public async Task<bool> Handle(EntryFavoriteCreateCommand request, CancellationToken cancellationToken)
         {
-            QueueFactory.SendMessageToExchange(exchangeName: Constants.FavoriteExchangeName,
-                                                exchangeType: Constants.ExchangeType,
-                                                queueName: Constants.EntryCommentFavoriteCreateQueueName,
-                                                obj: new EntryFavoriteCreateEvent()
-                                                {
-                                                   EntryId = request.EntryId.Value,
-                                                   UserId = request.UserId.Value
-                                                });
+            try
+            {
+                QueueFactory.SendMessageToExchange(exchangeName: Constants.FavoriteExchangeName,
+                                              exchangeType: Constants.ExchangeType,
+                                              queueName: Constants.EntryCommentFavoriteCreateQueueName,
+                                              obj: new EntryFavoriteCreateEvent()
+                                              {
+                                                  EntryId = request.EntryId.Value,
+                                                  UserId = request.UserId.Value
+                                              });
 
-            return await Task.FromResult(true);
+                return await Task.FromResult(true);
+            }
+            catch (Exception ex)
+            {
+                LoggingExtension.YoloErrorLog(ex, nameof(EntryFavoriteCreateCommandHandler), request);
+                throw;
+            }
+
         }
     }
 }

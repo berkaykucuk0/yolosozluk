@@ -1,6 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Serilog;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -33,7 +34,8 @@ namespace YoloSozluk.Infrastructure.Persistence.Extensions
             services.AddScoped<IEntryCommentRepository, EntryCommentRepository>();
             services.AddScoped<IEmailConfirmationRepository, EmailConfirmationRepository>();
             services.AddScoped<TokenGenerator>();
-
+            services.AddSingleton(Log.Logger); 
+             services.AddLogging();
 
             return services;
         }

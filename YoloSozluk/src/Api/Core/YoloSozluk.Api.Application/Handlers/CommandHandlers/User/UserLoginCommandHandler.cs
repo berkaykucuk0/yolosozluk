@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using YoloSozluk.Api.Application.IRepositories;
+using YoloSozluk.Common;
 using YoloSozluk.Common.Exceptions.User;
 using YoloSozluk.Common.Infrastructure;
 using YoloSozluk.Common.Models.Commands;
@@ -33,32 +34,42 @@ namespace YoloSozluk.Api.Application.Handlers.CommandHandlers
 
         public async Task<UserLoginViewModel> Handle(UserLoginCommand request, CancellationToken cancellationToken)
         {
-            var user = await _userRepo.GetSingleAsync(x => x.Email == request.EmailAddress);
-
-            if (user == null)
-                throw new UserException("User not found!");
-
-            var password = Encryptor.Encrypt(request.Password);
-
-            if (user.Password != password)
-                throw new UserException("Wrong email or password!");
-
-            if (!user.EmailConfirmed)
-                throw new UserException("Email address is not confirmed!");
-
-            var result = _mapper.Map<UserLoginViewModel>(user);
-
-            var claims = new Claim[]
+            try
             {
+                var user = await _userRepo.GetSingleAsync(x => x.Email == request.EmailAddress);
+
+                if (user == null)
+                    throw new UserException("User not found!");
+
+                var password = Encryptor.Encrypt(request.Password);
+
+                if (user.Password != password)
+                    throw new UserException("Wrong email or password!");
+
+                if (!user.EmailConfirmed)
+                    throw new UserException("Email address is not confirmed!");
+
+                var result = _mapper.Map<UserLoginViewModel>(user);
+
+                var claims = new Claim[]
+                {
                 new Claim(ClaimTypes.NameIdentifier, user.Id.ToString()),
                 new Claim(ClaimTypes.Email, user.Email),
                 new Claim(ClaimTypes.Name, user.UserName),
                 new Claim(ClaimTypes.GivenName, user.FirstName),
                 new Claim(ClaimTypes.Surname, user.LastName),
-            };
+                };
 
-            result.Token = _tokengenerator.GenerateToken(claims);
-            return result;
+                result.Token = _tokengenerator.GenerateToken(claims);
+                return result;
+
+
+            }
+            catch (Exception ex)
+            {
+                LoggingExtension.YoloErrorLog(ex, nameof(UserLoginCommandHandler), request);
+                throw;
+            }
         }
     }
 }

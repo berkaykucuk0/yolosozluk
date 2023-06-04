@@ -1,6 +1,7 @@
 ﻿using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using Serilog;
+using Serilog.Context;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -25,7 +26,7 @@ namespace YoloSozluk.Api.WebApi.Controllers
         [HttpGet]
         public async Task<IActionResult> GetEntries([FromQuery] GetEntriesQuery query)
         {
-            _logger.Information($"Start : Getting item details for {query}", query);
+           
             var res = await _mediator.Send(query);  
             return Ok(res);
         }
@@ -83,12 +84,10 @@ namespace YoloSozluk.Api.WebApi.Controllers
        }
 
         [HttpPost]
-        [Route("CreateEntryCommand")]
-        public async Task<IActionResult> CreateEntryCommand([FromBody] EntryCommentCreateCommand command)
+        [Route("CreateEntryComment")]
+        public async Task<IActionResult> CreateEntryComment([FromBody] EntryCommentCreateCommand command)
         {
-            if (!command.UserId.HasValue)
-                command.UserId = UserId;
-
+           
             var res = await _mediator.Send(command);
             return Ok(res);
         }

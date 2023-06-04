@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using YoloSozluk.Api.Application.IRepositories;
+using YoloSozluk.Common;
 using YoloSozluk.Common.Exceptions.User;
 using YoloSozluk.Common.Infrastructure;
 using YoloSozluk.Common.Models.Commands;
@@ -23,23 +24,32 @@ namespace YoloSozluk.Api.Application.Handlers.CommandHandlers.User
 
         public async Task<bool> Handle(UserChangePasswordCommand request, CancellationToken cancellationToken)
         {
-            if (!request.UserId.HasValue)
-                throw new ArgumentException(nameof(request.UserId));
+           
+            try
+            {
+                if (!request.UserId.HasValue)
+                    throw new ArgumentException(nameof(request.UserId));
 
-            var user = await _userRepo.GetByIdAsync(request.UserId.Value);
+                var user = await _userRepo.GetByIdAsync(request.UserId.Value);
 
-            if (user is null)
-                throw new UserException("User not found!");
+                if (user is null)
+                    throw new UserException("User not found!");
 
-            string hashedPassword = Encryptor.Encrypt(request.OldPassword);
-            if (user.Password != hashedPassword)
-                throw new UserException("Wrong Old Password!");
+                string hashedPassword = Encryptor.Encrypt(request.OldPassword);
+                if (user.Password != hashedPassword)
+                    throw new UserException("Wrong Old Password!");
 
-            user.Password = Encryptor.Encrypt(request.NewPassword);
+                user.Password = Encryptor.Encrypt(request.NewPassword);
 
-            await _userRepo.UpdateAsync(user);
+                await _userRepo.UpdateAsync(user);
 
-            return true;
+                return true;
+            }
+            catch (Exception ex)
+            {
+                LoggingExtension.YoloErrorLog(ex, nameof(UserChangePasswordCommandHandler), request);
+                throw;
+            }
         }
     }
 }

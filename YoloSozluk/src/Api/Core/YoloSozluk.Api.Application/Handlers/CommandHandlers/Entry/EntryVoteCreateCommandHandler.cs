@@ -1,4 +1,5 @@
 ﻿using MediatR;
+using System;
 using System.Threading;
 using System.Threading.Tasks;
 using YoloSozluk.Common;
@@ -12,17 +13,25 @@ namespace YoloSozluk.Api.Application.Handlers.CommandHandlers.Entry
     {
         public async Task<bool> Handle(EntryVoteCreateCommand request, CancellationToken cancellationToken)
         {
-            QueueFactory.SendMessageToExchange(exchangeName: Constants.EntryVoteExchangeName,
-                                                  exchangeType: Constants.ExchangeType,
-                                                  queueName: Constants.EntryVoteCreateQueueName,
-                                                  obj: new EntryVoteCreateEvent()
-                                                  {
-                                                      EntryId = request.EntryId,
-                                                      UserId = request.UserId,
-                                                      VoteType = request.VoteType
-                                                  });
+            try
+            {
+                QueueFactory.SendMessageToExchange(exchangeName: Constants.EntryVoteExchangeName,
+                                                exchangeType: Constants.ExchangeType,
+                                                queueName: Constants.EntryVoteCreateQueueName,
+                                                obj: new EntryVoteCreateEvent()
+                                                {
+                                                    EntryId = request.EntryId,
+                                                    UserId = request.UserId,
+                                                    VoteType = request.VoteType
+                                                });
 
-            return await Task.FromResult(true);
+                return await Task.FromResult(true);
+            }
+            catch (Exception ex)
+            {
+                LoggingExtension.YoloErrorLog(ex, nameof(EntryVoteCreateCommandHandler), request);
+                throw;
+            }
         }
     }
 }

@@ -8,4 +8,6 @@
     <ProjectReference Include="..\..\..\Common\YoloSozluk.Common\YoloSozluk.Common.csproj" />
   </ItemGroup>
 
+ 
+
 </Project>

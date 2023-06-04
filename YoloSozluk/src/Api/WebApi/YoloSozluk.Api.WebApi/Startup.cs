@@ -40,8 +40,6 @@ namespace YoloSozluk.Api.WebApi
             services.AddInfrastructureRegistration(Configuration);
             services.AddApplicationRegistration();
 
-            services.AddLogging();
-        
             services.AddDbContext<YoloSozlukContext>();
             services.AddControllers().AddFluentValidation();
 
@@ -87,8 +85,6 @@ namespace YoloSozluk.Api.WebApi
             {
                 endpoints.MapControllers();
             });
-
-
 
         }
     }

@@ -226,6 +226,10 @@
               "suppressParent": "All",
               "target": "Package",
               "version": "[5.0.17, )"
+            },
+            "Serilog.AspNetCore": {
+              "target": "Package",
+              "version": "[5.0.0, )"
             }
           },
           "imports": [
@@ -302,18 +306,6 @@
             "Microsoft.AspNetCore.Authentication.JwtBearer": {
               "target": "Package",
               "version": "[5.0.17, )"
-            },
-            "Serilog.AspNetCore": {
-              "target": "Package",
-              "version": "[5.0.0, )"
-            },
-            "Serilog.Sinks.MSSqlServer": {
-              "target": "Package",
-              "version": "[5.8.0, )"
-            },
-            "Serilog.Sinks.MSSqlServerCore": {
-              "target": "Package",
-              "version": "[1.1.1, )"
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
@@ -405,6 +397,18 @@
             "RabbitMQ.Client": {
               "target": "Package",
               "version": "[6.4.0, )"
+            },
+            "Serilog.Sinks.MSSqlServer": {
+              "target": "Package",
+              "version": "[5.8.0, )"
+            },
+            "Serilog.Sinks.MSSqlServerCore": {
+              "target": "Package",
+              "version": "[1.1.1, )"
+            },
+            "System.Data.SqlClient": {
+              "target": "Package",
+              "version": "[4.8.5, )"
             },
             "System.IdentityModel.Tokens.Jwt": {
               "target": "Package",

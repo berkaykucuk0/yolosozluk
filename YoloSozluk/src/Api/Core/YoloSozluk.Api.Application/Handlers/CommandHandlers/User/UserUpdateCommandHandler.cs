@@ -28,36 +28,43 @@ namespace YoloSozluk.Api.Application.Handlers.CommandHandlers.User
 
         public async Task<bool> Handle(UserUpdateCommand request, CancellationToken cancellationToken)
         {
-            
-            var user = await _userRepo.GetByIdAsync(request.Id);
-            var oldEmail = user.Email;
-
-            if (user == null)
-                throw new UserException("User not found!");
-
-            _mapper.Map(request, user);
-            var response = await _userRepo.UpdateAsync(user);
-
-            if (response > 0 && user.Email != oldEmail)
+            try
             {
-                var @event = new UserEmailChangedEvent
+                var user = await _userRepo.GetByIdAsync(request.Id);
+                var oldEmail = user.Email;
+
+                if (user == null)
+                    throw new UserException("User not found!");
+
+                _mapper.Map(request, user);
+                var response = await _userRepo.UpdateAsync(user);
+
+                if (response > 0 && user.Email != oldEmail)
                 {
-                    NewEmail = user.Email,
-                    OldEmail = oldEmail
-                };
+                    var @event = new UserEmailChangedEvent
+                    {
+                        NewEmail = user.Email,
+                        OldEmail = oldEmail
+                    };
 
-                QueueFactory.SendMessageToExchange(exchangeName: Constants.UserEmailChangedExchangeName,
-                                                   exchangeType: Constants.ExchangeType,
-                                                   queueName: Constants.UserEmailChangedQueueName,
-                                                   obj: @event);
+                    QueueFactory.SendMessageToExchange(exchangeName: Constants.UserEmailChangedExchangeName,
+                                                       exchangeType: Constants.ExchangeType,
+                                                       queueName: Constants.UserEmailChangedQueueName,
+                                                       obj: @event);
 
-                user.EmailConfirmed = false;
-                await _userRepo.UpdateAsync(user);
+                    user.EmailConfirmed = false;
+                    await _userRepo.UpdateAsync(user);
+                }
+                return response > 0;
+
+                //TODO EMAIL CONFIRMATION WILL ADD
+
             }
-
-            return response > 0 ;
-
-            //EMAIL CONFIRMATION WILL ADD
+            catch (Exception ex)
+            {
+                LoggingExtension.YoloErrorLog(ex, nameof(UserUpdateCommandHandler), request);
+                throw;
+            }
         }
     }
 }
